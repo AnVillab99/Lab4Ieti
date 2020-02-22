@@ -1,10 +1,14 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 
-Necesita 
+Necesita para local:
 > np install moment
 Usuario: test@mail.com
 pass: admin
+
+Heroku:
+> https://hidden-beyond-20196.herokuapp.com
+mismas credenciales
 
 ## Available Scripts
 
