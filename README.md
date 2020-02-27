@@ -1,6 +1,7 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 
+
 Necesita para local:
 > np install moment
 Usuario: test@mail.com
@@ -10,6 +11,8 @@ Heroku:
 > https://hidden-beyond-20196.herokuapp.com
 mismas credenciales
 
+fire base:
+> https://taks-planner-app-1e6ee.firebaseapp.com
 ## Available Scripts
 
 In the project directory, you can run:
