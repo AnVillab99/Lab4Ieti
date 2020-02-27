@@ -53,12 +53,15 @@ export class SignUp extends React.Component{
             alert("Passwords do not match");
         } else if(this.state.name && this.state.email && this.state.pass && this.state.pass2 ){
             alert("Account Created");
-            window.location.href = "/";
             localStorage.setItem('name',this.state.name);
             localStorage.setItem('email',this.state.email);
             localStorage.setItem('password', this.state.pass);
             console.log(this.state.pass)
+            console.log("email stored: "+localStorage.getItem("email"))
+            window.location.href = "/";
+            alert("ok")
         }
+
 
     }
 

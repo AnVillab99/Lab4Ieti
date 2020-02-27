@@ -12,8 +12,10 @@ constructor(props) {
     super(props);
     
     this.state = { isLoggedIn: false };
-    localStorage.setItem("email","test@mail.com");
-    localStorage.setItem("password","admin");
+    if((localStorage.getItem("email")=="test@mail.com") || (localStorage.getItem("email")==null)){
+        localStorage.setItem("email","test@mail.com");
+        localStorage.setItem("password","admin");
+    }
     if(! localStorage.getItem("isLoggedIn")){
         console.log("no esta logeado en consturctor ap")
         localStorage.setItem("isLoggedIn",false);
