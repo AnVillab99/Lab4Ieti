@@ -46,7 +46,7 @@ export class Login extends React.Component{
                 localStorage.setItem("isLoggedIn", true)
                 this.props.loginF()
         }else{
-            alert("Credenciales erradas")
+            alert("Wrong credentials")
         }
         
     }
@@ -96,6 +96,9 @@ export class Login extends React.Component{
                             </Button>
                         </form>
                     </Paper>
+                    <div className="text-center"><br></br>
+                        <a href="/signUp">Create Account</a>
+                    </div>
                 </main>
             </React.Fragment>
         );

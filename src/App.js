@@ -3,7 +3,9 @@ import './App.css';
 import React, {Component} from 'react';
 import {Login} from "./components/Login"
 import {TodoApp} from "./components/TodoApp"
-import {BrowserRouter as Router, Link, Route} from 'react-router-dom'
+import {SignUp} from "./components/Registro/SignUp"
+import {BrowserRouter as Router, Link, Route,Switch} from 'react-router-dom'
+
 
 class App extends Component {
 constructor(props) {
@@ -30,6 +32,7 @@ loginF() {
 }
 
 
+
 render() {
     
     console.log("--------------------------------------------")
@@ -44,13 +47,17 @@ render() {
     console.log("////////////////////////////////////////////////////")
     const LoginView = () => (<Login loginF = { this.loginF }/>);
     const TodoAppView = () => ( <TodoApp/> );
+    const SignUpView =() => ( <SignUp />);
     return (
         <Router>
             <div className="App">
                 
                 <div>
-                <Route component={!(this.state.isLoggedIn || ('true'===localStorage.getItem("isLoggedIn")))? LoginView : TodoAppView}/>
+                <Switch>
+                <Route  exact path ="/" component={!(this.state.isLoggedIn || ('true'===localStorage.getItem("isLoggedIn")))? LoginView : TodoAppView}/>
                 
+                <Route  exact path="/signUp" component={SignUpView} />
+                </Switch> 
                 </div>
             </div>
         </Router>
